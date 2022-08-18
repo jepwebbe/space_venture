@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom"
 import "./NavBar.scss"
-import Logo from "../images/logo.png"
+import Logo from "../assets/images/logo.png"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGooglePlusG, faTwitter, faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons'
@@ -15,7 +15,12 @@ function NavBar() {
                 <ul className="InternalNav">
                     <li><NavLink activeClassName="active" to="/">Hjem</NavLink></li>
                     <li><NavLink to="/rumfargen">Rumfærgen</NavLink></li>
-                    <li><NavLink to="/ture">Ture</NavLink></li>
+                    <li className="Dropdown"><NavLink to="/ture">Ture</NavLink>
+                        <ul className="DropdownContent">
+                            <li><NavLink to="/ture#manen">Månen</NavLink></li>
+                            <li><NavLink to="/ture#mars">Mars</NavLink></li>
+                        </ul>
+                    </li>
                     <li><NavLink to="/galleri">Galleri</NavLink></li>
                     <li><NavLink to="/sikkerhed">Sikkerhed</NavLink></li>
                     <li><NavLink to="/kontakt">Kontakt</NavLink></li>

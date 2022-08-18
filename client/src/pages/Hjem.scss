@@ -1,0 +1,88 @@
+@import "../assets/mixins.scss";
+@import "../assets/variables.scss";
+
+
+main {
+    display: grid;
+    justify-content: center;
+    section {
+        margin-bottom: 2.5rem;
+    }
+    .Slider {
+        .SliderImage {
+            width: 100vw;
+            display: none;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+    }
+
+    .Omos {
+        display: flex;
+        justify-content: center;
+        padding: 0 5rem;
+        gap: 3rem;
+
+        h3 {
+            color: $green;
+        }
+
+        .Line {
+            width: 100%;
+            height: 0.2rem;
+            background: -webkit-linear-gradient(left, $green 50%, #d0d0d0 50%);
+        }
+
+        button {
+            @include buttonstyle;
+
+            a {
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+
+    #Team {
+        h2 {
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        h4 {
+            color: $green;
+        }
+
+        .TeamGrid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            justify-items: center;
+            text-align: center;
+        }
+    }
+    .Nyhedsbrev {
+        height:25rem;
+        color: white;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h2 {
+            font-size: 3rem;
+            margin: 0;
+        }
+        form {
+        } button {
+            @include buttonstyle;
+            width: 5rem;
+        }
+        form input {
+            height: 3rem;
+            margin-right: 0.5rem;
+            border: none;
+            padding: 0 0 0 0.5rem;
+            background-color: rgba(156, 154, 151,.5);
+            color: #fff;}
+    }
+
+}

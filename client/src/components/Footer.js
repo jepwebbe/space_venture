@@ -24,7 +24,7 @@ function Footer() {
                     <ul className="Links">
                     <li><NavLink to="/rumfargen">Rumfærgen</NavLink></li>
                     <li><NavLink to="/ture">Ture</NavLink></li>
-                    <li><NavLink to="/hjem#team">Vores team</NavLink></li>
+                    <li><NavLink to="/#Team">Vores team</NavLink></li>
                     <li><NavLink to="/galleri">Galleri</NavLink></li>
                     <li><NavLink to="/sikkerhed">Sikkerhed</NavLink></li>
                     </ul>
