@@ -1,0 +1,83 @@
+$backlight: #142e42;
+$backdark: #0f2638;
+$buttons: #00b3a7;
+
+footer {
+    .Foot1 {
+        background-color: $backlight;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 5rem;
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        .Contact ul{
+            list-style-type: none;
+            li svg {
+                color:$buttons;
+            }
+        }
+        .ArtLinks {
+            padding-right: 10rem;
+        }
+        .Links {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            width: 150%;
+            list-style-type: none;
+        }
+        // Code  below taken from https://www.w3schools.com/howto/howto_css_bullet_color.asp
+        .Links li::before {
+            content: "\2022";
+            /* Add content: \2022 is the CSS Code/unicode for a bullet */
+            color: $buttons;
+            /* Change the color */
+            font-weight: bold;
+            /* If you want it to be bold */
+            display: inline-block;
+            /* Needed to add space between the bullet and the text */
+            width: 1em;
+            /* Also needed for space (tweak if needed) */
+            margin-left: -1em;
+            /* Also needed for space (tweak if needed) */
+        }
+
+        button {
+            background-color: $buttons;
+            border: none;
+            margin-left: 1rem;
+        }
+    }
+    .Foot2 {
+        background-color: $backdark;
+        font-size: 0.8rem;
+        color: #586874;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: space-between;
+        padding-left: 5rem;
+
+        ul {
+            display: flex;
+            list-style-type: none;
+            justify-self: center;
+            a {
+                color: #586874;
+            }
+        }
+
+        button {
+            background-color: $buttons;
+            border: none;
+            color: white;
+            width: 2rem;
+            height: 2rem;
+            margin: 0.5rem 1rem;
+            font-size: 1.5rem;
+            justify-self: end;
+        }
+    }
+}
