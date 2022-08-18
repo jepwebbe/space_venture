@@ -14,6 +14,9 @@ footer {
             color: white;
             text-decoration: none;
         }
+        ul {
+            padding: 0;
+        }
         .Contact ul{
             list-style-type: none;
             li svg {
@@ -28,26 +31,16 @@ footer {
             grid-template-columns: repeat(2, 1fr);
             width: 150%;
             list-style-type: none;
+            svg {
+                color: $green;
+                font-size: 0.5rem;
+                padding: 0 0.5rem 0.15rem 0;                
+            }
         }
-        // Code  below taken from https://www.w3schools.com/howto/howto_css_bullet_color.asp
-        .Links li::before {
-            content: "\2022";
-            /* Add content: \2022 is the CSS Code/unicode for a bullet */
-            color: $green;
-            /* Change the color */
-            font-weight: bold;
-            /* If you want it to be bold */
-            display: inline-block;
-            /* Needed to add space between the bullet and the text */
-            width: 1em;
-            /* Also needed for space (tweak if needed) */
-            margin-left: -1em;
-            /* Also needed for space (tweak if needed) */
-        }
+
 
         button {
             @include buttonstyle;
-            margin-left: 1rem;
         }
     }
     .Foot2 {

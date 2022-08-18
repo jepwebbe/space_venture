@@ -4,7 +4,7 @@ import "./Footer.scss"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGooglePlusG, faTwitter, faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons'
-import { faPhone, faEnvelope, faLocationArrow } from '@fortawesome/free-solid-svg-icons'
+import { faPhone, faEnvelope, faLocationArrow, faCircle} from '@fortawesome/free-solid-svg-icons'
 
 
 function Footer() {
@@ -22,11 +22,11 @@ function Footer() {
                 <article className="ArtLinks">
                     <h3>HURTIGE LINKS</h3>
                     <ul className="Links">
-                    <li><NavLink to="/rumfargen">Rumfærgen</NavLink></li>
-                    <li><NavLink to="/ture">Ture</NavLink></li>
-                    <li><NavLink to="/#Team">Vores team</NavLink></li>
-                    <li><NavLink to="/galleri">Galleri</NavLink></li>
-                    <li><NavLink to="/sikkerhed">Sikkerhed</NavLink></li>
+                    <li><NavLink to="/rumfargen"><FontAwesomeIcon icon={faCircle} />Rumfærgen</NavLink></li>
+                    <li><NavLink to="/ture"><FontAwesomeIcon icon={faCircle} />Ture</NavLink></li>
+                    <li><NavLink to="/#Team"><FontAwesomeIcon icon={faCircle} />Vores team</NavLink></li>
+                    <li><NavLink to="/galleri"><FontAwesomeIcon icon={faCircle} />Galleri</NavLink></li>
+                    <li><NavLink to="/sikkerhed"><FontAwesomeIcon icon={faCircle} />Sikkerhed</NavLink></li>
                     </ul>
                     <button><a href="mailto:info@spaceventure.dk">Kontakt</a></button>
                 </article>

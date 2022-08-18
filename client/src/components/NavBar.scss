@@ -1,3 +1,4 @@
+@import "../assets/variables.scss";
 .Logo {
     padding: 0.5rem 5rem;
 }
@@ -22,7 +23,6 @@ nav {
     align-content: center;
     list-style: none;
     height: 100%;
-    
     li {
         padding-right: 2rem;
         text-align: center;
@@ -86,4 +86,28 @@ nav {
     }
 }
 
-@media (max-width: 799px) {}
+@media (max-width: 799px) {
+    .Burger {
+        color: $green;
+        display: flex;
+        z-index: 1000;
+        position: absolute;
+        left: 1rem;
+        top: 2.4rem;
+        text-align: center;
+        font-size: 48px;
+        z-index: 100;
+    }
+    .InternalNav {
+        display: none;
+        font-size:2rem;
+        margin-left: 0;
+        flex-direction: column;
+        justify-content: center;
+        height: 50vh;
+        width: 50vw;
+        background-color: #989BA4;
+        line-height: 2;
+        z-index: 10;
+    }
+}

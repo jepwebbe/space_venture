@@ -1,18 +1,29 @@
 import React from "react";
-import { NavLink } from "react-router-dom"
-import "./NavBar.scss"
-import Logo from "../assets/images/logo.png"
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import "./NavBar.scss";
+import Logo from "../assets/images/logo.png";
+import Burger from "../components/Burger";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGooglePlusG, faTwitter, faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faBars} from '@fortawesome/free-solid-svg-icons'
+
 
 function NavBar() {
+    const [isDisplay, setIsDisplay] = useState(false);
+
+    const handleClick = () => {
+        setIsDisplay(current => !current);
+    }
     return (
         <header>
-            <div className="Burger"><p>Burger</p></div>
+            <div className="Burger" onClick={handleClick}>
+            <FontAwesomeIcon icon={faBars} /></div>
             <a href="/"><img src={Logo} alt="Our logo" className="Logo" /></a>
             <nav>
-                <ul className="InternalNav">
+                <ul className="InternalNav" 
+                style={{ display: isDisplay ? 'none' : 'flex' }}>
                     <li><NavLink activeClassName="active" to="/">Hjem</NavLink></li>
                     <li><NavLink to="/rumfargen">Rumfærgen</NavLink></li>
                     <li className="Dropdown"><NavLink to="/ture">Ture</NavLink>
