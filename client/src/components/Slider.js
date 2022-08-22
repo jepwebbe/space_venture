@@ -1,11 +1,11 @@
 import React from "react";
-import Banner1 from "../assets/images/banner1.jpg";
-import Banner2 from "../assets/images/banner2.jpg";
-import Banner3 from "../assets/images/banner3.jpg";
+import Banner1 from "../assets/images/banner1-fw.jpg";
+import Banner2 from "../assets/images/banner2-fw.jpg";
+import Banner3 from "../assets/images/banner3-fw.jpg";
 import "./Slider.scss";
 const images = [Banner1, Banner2, Banner3];
 
-const delay = 10000;
+const delay = 5000;
 // https://tinloof.com/blog/how-to-build-an-auto-play-slideshow-with-react
 export default function Slideshow() {
     const [index, setIndex] = React.useState(0);
@@ -26,7 +26,7 @@ export default function Slideshow() {
     return (
         <section className="slideshow">
             <div className="slideshowSlider"
-                style={{ transform: `translateY(${-index * 720}px)` }}>
+                style={{ transform: `translateY(${-index * 550}px)` }}>
                 {images.map((image, index) => (
                     <img className="slide" key={index} src={image} />
                 ))}
