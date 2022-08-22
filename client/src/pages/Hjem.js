@@ -1,9 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Hjem.scss";
-import Banner1 from "../assets/images/banner1.jpg";
-import Banner2 from "../assets/images/banner2.jpg";
-import Banner3 from "../assets/images/banner3.jpg";
+import Slideshow from "../components/Slider";
+import Moon from "../assets/images/moon-btn.jpg";
+import Mars from "../assets/images/mars-btn.jpg";
 import OmosImg from "../assets/images/om-os.jpg";
 import Diana from "../assets/images/diana.jpg";
 import Peter from "../assets/images/peter.jpg";
@@ -16,12 +16,22 @@ function Hjem() {
 
     return (
         <main>
-            <section className="Slider">
-                <img src={Banner1} alt="Rummet er for alle" className="SliderImage" />
-                <img src={Banner2} alt="Rummet er for alle" className="SliderImage" />
-                <img src={Banner3} alt="Rummet er for alle" className="SliderImage" />
+            <Slideshow />
+            <section className="TureLinks">
+                <NavLink to="/ture#TureMoon•"><div className="ImageContainer">
+                    <h3>Månen</h3>
+                    <div className="HoverImage" style={{ backgroundImage: `url(${Moon})` }}>
+                    </div>
+                </div>
+                </NavLink>
+
+                <NavLink to="/ture#TureMars"><div className="ImageContainer">
+                    <h3>Mars</h3>
+                    <div className="HoverImage" style={{ backgroundImage: `url(${Mars})` }}>
+                    </div>
+                </div>
+                </NavLink>
             </section>
-            <section className="TureLinks"></section>
             <section className="Omos">
                 <img src={OmosImg} alt="Rummet er for alle" />
                 <div>
@@ -57,7 +67,7 @@ function Hjem() {
                     </article>
                 </div>
             </section>
-            <section className="Nyhedsbrev" style={{backgroundImage:`url(${BaggrundNyhedsbrev})`}}>
+            <section className="Nyhedsbrev" style={{ backgroundImage: `url(${BaggrundNyhedsbrev})` }}>
                 <h2>Tilmeld dig og få 25% rabat</h2>
                 <p>Tilmeld dig vores nyhedsbrev og få 25% rabat på din første tur!</p>
                 <NyhedsbrevForm />

@@ -1,0 +1,64 @@
+@import "../assets/mixins.scss";
+@import "../assets/variables.scss";
+
+.Kontakt {
+    max-width: 80rem;
+    margin: 0 auto;
+    .MapWrap {
+        display: flex;
+        justify-content: center;
+        margin: 1rem;
+    }
+    .KontaktWrap {
+        display: flex;
+        align-items: center;
+        p {
+            padding-left: 5rem;
+        }
+    }
+
+     form {
+        display: grid;
+        grid-template-areas:
+            "navn email tlf"
+            "besked besked besked"
+            "knap . .";
+        gap: 1rem;
+        margin: 0 auto;
+
+        input,
+        textarea {
+            background-color: #f7f7f7;
+            border: none;
+            padding-left: 1rem;
+        }
+
+        input {
+            line-height: 3;
+        }
+
+        .Navn {
+            grid-area: navn;
+        }
+
+        input[type=email] {
+            grid-area: email;
+        }
+
+        input[type=tel] {
+            grid-area: tlf;
+        }
+
+        .Besked {
+            grid-area: besked;
+            height: 10rem;
+            padding-top: 1rem;
+        }
+
+        button {
+            @include buttonstyle;
+            grid-area: knap;
+            cursor: pointer;
+        }
+    }
+}

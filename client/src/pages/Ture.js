@@ -2,7 +2,10 @@ import React from "react";
 
 function Ture() {
 return(
-    <p>Jeg er ture</p>
+    <section>
+        <article id="TureMoon"></article>
+        <article id="TureMars"></article>
+    </section>
 )
 }
 

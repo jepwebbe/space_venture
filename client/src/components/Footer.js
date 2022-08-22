@@ -39,7 +39,7 @@ function Footer() {
                     <li><a href="#" target="_blank"><FontAwesomeIcon icon={faGooglePlusG} /></a></li>
                     <li><a href="#" target="_blank"><FontAwesomeIcon icon={faInstagram} /></a></li>
                 </ul>
-                <button>^</button>
+                <button><a href="#top">^</a></button>
             </section>
         </footer>
 
