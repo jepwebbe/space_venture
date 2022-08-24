@@ -122,7 +122,8 @@ nav {
         top: 2.4rem;
         text-align: center;
         font-size: 48px;
-        z-index: 100;
+        z-index: 10000;
+        position: relative;
     }
 
     .InternalNav {
@@ -131,10 +132,13 @@ nav {
         margin-left: 0;
         flex-direction: column;
         justify-content: center;
-        height: 50vh;
+        height: 50rem;
         width: 50vw;
-        background-color: #989BA4;
+        background-color: $backlight;
         line-height: 2;
-        z-index: 10;
+        z-index: 1000;
+        position: absolute;
+        top: 6rem;
+        left: 0;
     }
 }

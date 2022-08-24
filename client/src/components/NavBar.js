@@ -10,7 +10,7 @@ import { faBars} from '@fortawesome/free-solid-svg-icons'
 
 
 function NavBar() {
-    const [isDisplay, setIsDisplay] = useState(false);
+    const [isDisplay, setIsDisplay] = useState(true);
 
     const handleClick = () => {
         setIsDisplay(current => !current);
