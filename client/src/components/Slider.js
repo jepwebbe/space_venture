@@ -35,13 +35,11 @@ export default function Slideshow() {
     }
 
     useEffect(() => {
-        const slideToBeActive = [0, 1, 2];
-
         resetTimeout();
         timeoutRef.current = setTimeout(
             () =>
                 setIndex((prevIndex) =>
-                    prevIndex === slideToBeActive.length - 1 ? 0 : prevIndex + 1
+                    prevIndex === images.length - 1 ? 0 : prevIndex + 1
                 ),
             delay
         );

@@ -133,13 +133,14 @@ html body div#root header nav ul.InternalNav li.Dropdown.NavLi a {
         z-index: 1000;
         position: absolute;
         left: 1rem;
-        top: 2.4rem;
+        top: 0.3rem;
         text-align: center;
         font-size: 48px;
         z-index: 10000;
-        position: relative;
     }
-
+    .LogoBlock {
+        display:none;
+    }
     .InternalNav {
         display: none;
         font-size: 2rem;
@@ -149,11 +150,13 @@ html body div#root header nav ul.InternalNav li.Dropdown.NavLi a {
         height: 50rem;
         width: 50vw;
         background-color: $backlight;
-        line-height: 2;
         z-index: 1000;
         position: absolute;
-        top: 6rem;
+        top: 3.4rem;
         left: 0;
+    }
+    html body div#root header nav ul.InternalNav li.Dropdown.NavLi  {
+        text-align: left;
     }
 
 }

@@ -5,6 +5,7 @@
     width: 100%;
     height: 34.375rem;
     position: relative;
+    display: grid;
 
 
     .slideshowSlider {
@@ -22,6 +23,10 @@
     /* Buttons */
     .slideshowDots {
         text-align: center;
+        z-index: 2000;
+        position: absolute;
+        top: 10rem;
+        right: 10rem;
     }
 
     .slideshowDot {
@@ -32,12 +37,13 @@
         cursor: pointer;
         margin: 15px 7px 0px;
         background-color: #c4c4c4;
-        z-index: 2000;
-        position: absolute;
-        top: 1rem;
-        right: 10rem;
     }
     .slideshowDot.active {
         background-color: $green;
       }
 }
+    @media (max-width: 799px) {
+.slideshowDots {
+    top: 10rem;
+}
+    }

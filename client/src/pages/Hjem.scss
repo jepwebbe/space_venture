@@ -131,3 +131,13 @@ main {
     }
 
 }
+
+@media (max-width: 620px) {
+    main .TureLinks .ImageContainer {
+        width: 10rem;
+        height: 12.5rem;
+    }
+    main .Omos {
+        grid-template-columns: none;
+    }
+}

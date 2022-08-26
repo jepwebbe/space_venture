@@ -84,3 +84,8 @@ footer {
         }
     }
 }
+@media (max-width: 799px) {
+    footer .Foot1 .ArtLinks {
+        padding-right: unset;
+    }
+}
