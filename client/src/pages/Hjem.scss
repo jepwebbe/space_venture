@@ -16,15 +16,19 @@ main {
         place-items: center;
         padding: 0 5rem;
         gap: 3rem;
+        max-width: 100rem;
+        margin: 0 auto; 
+
+        img {
+            margin: 0 auto;
+        }
 
         h3 {
             color: $green;
         }
 
         .Line {
-            width: 100%;
-            height: 0.2rem;
-            background: -webkit-linear-gradient(left, $green 50%, #d0d0d0 50%);
+            @include line;
         }
 
         button {
@@ -61,7 +65,7 @@ main {
                 color: white;
                 display: flex;
                 justify-content: center;
-                align-items: end;
+                align-items: flex-end;
                 grid-area: 1/1/1/1;
                 transition: all 1s;
             }
@@ -92,7 +96,7 @@ main {
 
         .TeamGrid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             justify-items: center;
             text-align: center;
         }

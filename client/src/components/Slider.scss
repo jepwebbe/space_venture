@@ -8,13 +8,14 @@
 
 
     .slideshowSlider {
-        transition: ease 1000ms;
+        transition: ease 2000ms;
         width: 100%;
         height: auto;
 
         .slide {
             width: 100%;
             height: auto;
+            object-fit: cover;
         }
     }
 
@@ -36,7 +37,7 @@
         top: 1rem;
         right: 10rem;
     }
-    .active {
+    .slideshowDot.active {
         background-color: $green;
       }
 }

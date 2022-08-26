@@ -1,8 +1,8 @@
 import React from "react";
 import { useState, useRef, useEffect } from "react";
-import Banner1 from "../assets/images/banner1-fw.jpg";
-import Banner2 from "../assets/images/banner2-fw.jpg";
-import Banner3 from "../assets/images/banner3-fw.jpg";
+import Banner1 from "../assets/images/banner1.jpg";
+import Banner2 from "../assets/images/banner2.jpg";
+import Banner3 from "../assets/images/banner3.jpg";
 import "./Slider.scss";
 const images = [Banner1, Banner2, Banner3];
 
@@ -23,7 +23,8 @@ export default function Slideshow() {
             return () => { };
         }, [index]); */
     // Daniels code below, as code above acted out bc of setTimeout apparently
-    const slideToBeActiv = [0, 1, 2];
+
+    //Keeps track of the current index
     const [index, setIndex] = useState(0);
     const timeoutRef = useRef(null);
 
@@ -34,11 +35,13 @@ export default function Slideshow() {
     }
 
     useEffect(() => {
+        const slideToBeActive = [0, 1, 2];
+
         resetTimeout();
         timeoutRef.current = setTimeout(
             () =>
                 setIndex((prevIndex) =>
-                    prevIndex === slideToBeActiv.length - 1 ? 0 : prevIndex + 1
+                    prevIndex === slideToBeActive.length - 1 ? 0 : prevIndex + 1
                 ),
             delay
         );
@@ -48,13 +51,14 @@ export default function Slideshow() {
         };
     }, [index]);
 
-
     return (
         <section className="slideshow">
+            {/* translate moves the slider so that the next image is showed */}
             <div className="slideshowSlider"
-                style={{ transform: `translateY(${-index * 33}%)` }}>
+                style={{ transform: `translateY(${-index * 38}%)` }}>
+                {/* Maps through the images array */}
                 {images.map((image, index) => (
-                    <img className="slide" key={index} src={image} />
+                    <img className="slide" key={index} src={image} alt="Rummet er mægtigt" />
                 ))}
             </div>
             <div className="slideshowDots">
@@ -62,9 +66,11 @@ export default function Slideshow() {
                     <div
                         key={idx}
                         className={`slideshowDot${index === idx ? " active" : ""}`}
+                        onClick={() => {
+                            setIndex(idx);
+                        }}
                     ></div>
-                ))
-                }
+                ))}
             </div>
         </section>
     );

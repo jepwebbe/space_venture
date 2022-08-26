@@ -4,7 +4,7 @@ import "./Footer.scss"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGooglePlusG, faTwitter, faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons'
-import { faPhone, faEnvelope, faLocationArrow, faCircle} from '@fortawesome/free-solid-svg-icons'
+import { faPhone, faEnvelope, faLocationArrow, faCircle, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 
 
 function Footer() {
@@ -22,11 +22,11 @@ function Footer() {
                 <article className="ArtLinks">
                     <h3>HURTIGE LINKS</h3>
                     <ul className="Links">
-                    <li><NavLink to="/rumfargen"><FontAwesomeIcon icon={faCircle} />Rumfærgen</NavLink></li>
-                    <li><NavLink to="/ture"><FontAwesomeIcon icon={faCircle} />Ture</NavLink></li>
-                    <li><NavLink to="/#Team"><FontAwesomeIcon icon={faCircle} />Vores team</NavLink></li>
-                    <li><NavLink to="/galleri"><FontAwesomeIcon icon={faCircle} />Galleri</NavLink></li>
-                    <li><NavLink to="/sikkerhed"><FontAwesomeIcon icon={faCircle} />Sikkerhed</NavLink></li>
+                        <li><NavLink to="/rumfargen"><FontAwesomeIcon icon={faCircle} />Rumfærgen</NavLink></li>
+                        <li><NavLink to="/ture"><FontAwesomeIcon icon={faCircle} />Ture</NavLink></li>
+                        <li><NavLink to="/#Team"><FontAwesomeIcon icon={faCircle} />Vores team</NavLink></li>
+                        <li><NavLink to="/galleri"><FontAwesomeIcon icon={faCircle} />Galleri</NavLink></li>
+                        <li><NavLink to="/sikkerhed"><FontAwesomeIcon icon={faCircle} />Sikkerhed</NavLink></li>
                     </ul>
                     <button><a href="mailto:info@spaceventure.dk">Kontakt</a></button>
                 </article>
@@ -34,12 +34,12 @@ function Footer() {
             <section className="Foot2">
                 <p>© 2021 Space Venture. All rights reserved</p>
                 <ul>
-                    <li><a href="#" target="_blank"><FontAwesomeIcon icon={faFacebookF} /></a></li>
-                    <li><a href="#" target="_blank"><FontAwesomeIcon icon={faTwitter} /></a></li>
-                    <li><a href="#" target="_blank"><FontAwesomeIcon icon={faGooglePlusG} /></a></li>
-                    <li><a href="#" target="_blank"><FontAwesomeIcon icon={faInstagram} /></a></li>
+                    <li><a rel="noreferrer" href="https://www.facebook.com" target="_blank"><FontAwesomeIcon icon={faFacebookF} /></a></li>
+                    <li><a rel="noreferrer" href="https://www.twitter.com" target="_blank"><FontAwesomeIcon icon={faTwitter} /></a></li>
+                    <li><a rel="noreferrer" href="https://www.google.com" target="_blank"><FontAwesomeIcon icon={faGooglePlusG} /></a></li>
+                    <li><a rel="noreferrer" href="https://www.instagram.com" target="_blank"><FontAwesomeIcon icon={faInstagram} /></a></li>
                 </ul>
-                <button><a href="#top">^</a></button>
+                <button><a href="#top"><FontAwesomeIcon icon={faChevronUp} /></a></button>
             </section>
         </footer>
 

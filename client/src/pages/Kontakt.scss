@@ -2,12 +2,16 @@
 @import "../assets/variables.scss";
 
 .Kontakt {
-    max-width: 80rem;
     margin: 0 auto;
+    padding-bottom: 2rem;
     .MapWrap {
         display: flex;
         justify-content: center;
         margin: 1rem;
+    }
+    .WrapWrap {
+        max-width: 70rem;
+        margin: 0 auto;
     }
     .KontaktWrap {
         display: flex;

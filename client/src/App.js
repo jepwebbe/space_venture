@@ -7,18 +7,14 @@ import Kontakt from "./pages/Kontakt";
 import Rumfargen from "./pages/Rumfargen";
 import Sikkerhed from "./pages/Sikkerhed";
 import Ture from "./pages/Ture";
+import Moon from "./pages/Moon";
+import Mars from "./pages/Mars";
 
 import Footer from "./components/Footer"
 import NavBar from "./components/NavBar";
 
 function App() {
-  const [data, setData] = React.useState(null);
 
-  React.useEffect(() => {
-    fetch("/api")
-      .then((res) => res.json())
-      .then((data) => setData(data.message));
-  }, []);
 
   return (
     <Router>
@@ -30,7 +26,8 @@ function App() {
         <Route path="/Rumfargen" element={<Rumfargen />} />
         <Route path="/Sikkerhed" element={<Sikkerhed />} />
         <Route path="/Ture" element={<Ture />} />
-
+        <Route path="/Moon" element={<Moon />} />
+        <Route path="/Mars" element={<Mars />} />
       </Routes>
       <Footer />
     </Router>

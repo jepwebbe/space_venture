@@ -18,7 +18,7 @@ function Hjem() {
         <main>
             <Slideshow />
             <section className="TureLinks">
-                <NavLink to="/ture#TureMoon•"><div className="ImageContainer">
+                <NavLink to="/ture#TureMoon"><div className="ImageContainer">
                     <h3>Månen</h3>
                     <div className="HoverImage" style={{ backgroundImage: `url(${Moon})` }}>
                     </div>

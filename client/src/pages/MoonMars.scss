@@ -1,0 +1,57 @@
+@import "../assets/mixins.scss";
+@import "../assets/variables.scss";
+
+section.TurePage {
+    display: flex;
+    max-width: 75%;
+    margin: 3rem auto;
+    gap: 3rem;
+
+    .Images {
+        display: flex;
+        flex-direction: column;
+        flex: 4;
+        gap: 2rem;
+    }
+
+    .Text {
+        flex: 3;
+
+        .TextHead {
+            display: grid;
+            grid-template-areas: "left right";
+            .Price {
+                @include buttonstyle;
+                @include cornerButton1;
+                height: 60%;
+            }
+    
+            .Price:after {
+                @include cornerButton2;
+            }
+            div {
+                place-self: start;
+                h1 {
+                    margin: 0;
+                }
+                .Line {
+                    @include line;
+                }
+            }
+        }
+        .TextPara {
+            div p span {
+                font-weight: bold;
+            }
+            .SomeNav {
+                @include externalNav;
+                padding-left: 0;
+                li  a {
+                    color: black;
+                }
+            }
+        }
+
+
+    }
+}

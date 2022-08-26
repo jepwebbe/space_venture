@@ -1,0 +1,52 @@
+@import "../assets/variables.scss";
+@import "../assets/mixins.scss";
+
+section.Ture {
+    h1 {
+        height: 25.75rem;
+        color: white;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+    }
+
+    .TureWrap {
+        max-width: 75%;
+        margin: 0 auto;
+        padding: 5rem;
+
+        article {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border: 0.1rem solid grey;
+            margin: 3rem;
+            .TureRight {
+                display: flex;
+                flex-direction: column;
+                padding-left: 3rem;
+
+                .Price {
+                    @include buttonstyle;
+                    @include cornerButton1;
+                }
+                .Price:after {
+                    @include cornerButton2;
+                }
+
+                div {
+                }
+                button {
+                    @include buttonstyle;
+                    color: black;
+                    background-color: white;
+                    border: 0.1rem solid black;
+                    a {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
